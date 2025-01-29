@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d1dddf;
+}
+
+#container {
+    background-color: white;
+    border-radius: 10px; /* Slightly rounded corners */
+    padding: 20px; /* Equal padding on all sides */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+    text-align: center; /* Center-align the content*/
+    width: fit-content;
+}
+
+#game {
+    text-align: center;
+}
+
+#controls {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Adds spacing between elements */
+}
+
+#new-game {
+    padding: 10px 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#new-game:hover {
+    background-color: #0056b3;
+}
+
+#controls span {
+    font-weight: bold   ; /* Making "Moves" and "Time" text bold */
+    font-size: 20px;
+    margin: 0 1px; /* Adding spacing between elements */
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-gap: 6px;
+    margin-top: 20px auto;
+    justify-content: center;
+}
+
+.card {
+    width: 60px;
+    height: 60px;
+    background-color: #007BFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.card.flipped {
+    background-color: #22893f;
+    color: white;
+}

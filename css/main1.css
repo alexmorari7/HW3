@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d1dddf;
+    margin: 0; /* Remove default body margin */
+}
+
+#container {
+    background-color: white;
+    border-radius: 10px; /* Slightly rounded corners */
+    padding: 20px; /* Equal padding on all sides */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+    text-align: center; /* Center-align the content */
+    width: fit-content; /* Ensure the container wraps around the content */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+#game {
+    text-align: center;
+    width: 100%; /* Ensure the game div takes up the full width of the container */
+}
+
+#controls {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Adds spacing between elements */
+    justify-content: center; /* Center the controls horizontally */
+}
+
+#new-game {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#new-game:hover {
+    background-color: #0056b3;
+}
+
+#controls span {
+    font-weight: bold; /* Making "Moves" and "Time" text bold */
+    font-size: 15px;
+    margin: 0 1px; /* Adding spacing between elements */
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(4, 60px); /* 4 columns, each 80px wide */
+    grid-gap: 10px; /* Spacing between cards */
+    margin: 20px auto; /* Center the grid horizontally */
+    justify-content: start; /* Align cards to the start (left) of the grid */
+    padding: 0; /* Remove any padding inside the grid */
+}
+
+.card {
+    width: 60px; /* Card width (matches grid column width) */
+    height: 60px; /* Card height */
+    background-color: #007BFF; /* Default card color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition for color change */
+    margin: 0; /* Remove any margin on cards */
+    padding: 0; /* Remove any padding on cards */
+}
+
+.card.flipped {
+    background-color: #22893f; /* Green color for flipped cards */
+    color: white; /* Ensure text is visible on green background */
+}
