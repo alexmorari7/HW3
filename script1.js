@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function saveTotalMoves() {
         const totalMoves = loadTotalMoves() + 1; // Increment total moves
         localStorage.setItem('totalMoves', totalMoves);
-        movesDisplay.textContent = totalMoves; // Update total moves display
     }
 
     // Create a card element
@@ -133,9 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize game
     newGameButton.addEventListener('click', startGame);
-
-    // Load and display total moves
-    movesDisplay.textContent = loadTotalMoves(); // Display total moves initially
 
     // Load game state if it exists
     const savedCards = loadGameState();
